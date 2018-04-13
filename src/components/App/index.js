@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
-import Intro from './components/Intro';
+import Intro from '../Intro';
 import './App.css';
 
 class App extends Component {
+	state = {
+		series: []
+	};
+	
 	render() {
 		return (
 			<div className="App">
@@ -10,6 +14,7 @@ class App extends Component {
 					<h1 className="App-title">TV Series List</h1>
 				</header>
 				<Intro message="Here you can find all of your most favorite series." />
+				The length of series of array - {this.state.series.length}
 			</div>
 		);
 	}
