@@ -11,7 +11,7 @@ class Series extends Component {
 	};
 
 	componentDidMount() {
-		fetch('http://api.tvmaze.com/search/shows?q=Vikings')
+		fetch('//api.tvmaze.com/search/shows?q=Vikings')
 			.then((response) => {
 				return response.json();
 			})
@@ -25,7 +25,7 @@ class Series extends Component {
 
 	onSeriesInputChange = (e) => {
 		this.setState({seriesName: e.target.value, isFetching: true});
-		fetch(`http://api.tvmaze.com/search/shows?q=${e.target.value}`)
+		fetch(`//api.tvmaze.com/search/shows?q=${e.target.value}`)
 			.then((response) => {
 				return response.json();
 			})
