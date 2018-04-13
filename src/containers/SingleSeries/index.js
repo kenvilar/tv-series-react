@@ -21,15 +21,24 @@ class SingleSeries extends Component {
 	}
 
 	render() {
-		console.log(this.props);
 		const {show} = this.state;
-		console.log(show);
 		return (
 			<div>
 				{
 					show === null
 					&&
 					<Loader/>
+				}
+				{
+					show !== null
+					&&
+					<div>
+						<p>{show.name}</p>
+						<p>Premiered - {show.premiered}</p>
+						<p>Rating - {show.rating.average}</p>
+						<p>Episodes - Total of {show._embedded.episodes.length} episodes</p>
+						<p><img src={show.image.original} alt="single-series"/></p>
+					</div>
 				}
 			</div>
 		);
