@@ -35,9 +35,6 @@ class Series extends Component {
 			.catch((ex) => {
 				console.log('parsing failed', ex);
 			});
-
-		console.log(e);
-		console.log(e.target.value);
 	};
 
 	render() {
