@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import SeriesList from '../../components/SeriesList';
 import Loader from '../../components/Loader';
+import Intro from '../../components/Intro';
 
 class Series extends Component {
 	state = {
@@ -44,7 +45,7 @@ class Series extends Component {
 
 		return (
 			<div>
-				The length of series of array - {this.state.series.length}
+				<Intro message="Here you can find all of your most favorite series."/>
 				<div>
 					<input type="text" value={seriesName} onChange={this.onSeriesInputChange}/>
 				</div>
@@ -69,6 +70,7 @@ class Series extends Component {
 					&&
 					<SeriesList list={this.state.series}/>
 				}
+				The length of series of array - {this.state.series.length}
 			</div>
 		);
 	}
