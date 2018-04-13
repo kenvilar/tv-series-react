@@ -4,7 +4,7 @@ import Series from "../../containers/Series";
 
 const Main = (props) => (
 	<Switch>
-		<Route exact path="/" component={Series}></Route>
+		<Route exact path="/" component={Series} />
 	</Switch>
 );
 
